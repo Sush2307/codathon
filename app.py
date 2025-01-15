@@ -1,6 +1,6 @@
 from flask import Flask, render_template, request, jsonify
 
-app = Flask(__name__)
+app=Flask(__name__,template_folder='template')
 
 # In-memory data stores
 volunteers = []

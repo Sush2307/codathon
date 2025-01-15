@@ -2,11 +2,11 @@ body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
-    background-color: #f9f9f9;
+    background-color: #0e86d6;
 }
 
 header {
-    background-color: #4CAF50;
+    background-color: #af4c4c;
     color: white;
     padding: 15px;
     text-align: center;
@@ -16,7 +16,7 @@ header {
     margin: 50px auto;
     padding: 20px;
     width: 50%;
-    background: white;
+    background: rgb(241, 243, 243);
     border-radius: 8px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
 }
@@ -30,7 +30,7 @@ form input, form button {
     width: 100%;
     padding: 10px;
     margin-bottom: 20px;
-    border: 1px solid #ddd;
+    border: 1px solid #020100;
     border-radius: 4px;
 }
 
