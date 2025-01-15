@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register - Volunteer-NGO Platform</title>
+    <link rel="stylesheet" href="register.css">
+</head>
+
+<body>
+    <header>
+        <h1>Register as Volunteer or NGO</h1>
+    </header>
+
+    <main>
+        <div class="container">
+            <h2>Register</h2>
+
+            <form id="registerForm" action="/register" method="POST">
+                <label for="userType">I am a:</label>
+                <select id="userType" name="userType" required>
+                    <option value="volunteer">Volunteer</option>
+                    <option value="ngo">NGO</option>
+                </select>
+
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" placeholder="Enter your name" required>
+
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" placeholder="Enter your email" required>
+
+                <div id="volunteerFields">
+                    <label for="skills">Skills:</label>
+                    <input type="text" id="skills" name="skills" placeholder="e.g., Teaching, Cooking">
+
+                    <label for="availability">Availability (hours/week):</label>
+                    <input type="number" id="availability" name="availability" min="1" max="168" placeholder="Enter hours">
+                </div>
+
+                <div id="ngoFields" style="display: none;">
+                    <label for="ngoRequirement">Requirement:</label>
+                    <textarea id="ngoRequirement" name="ngoRequirement" placeholder="Describe your NGO's requirement"></textarea>
+                </div>
+
+                <button type="submit">Register</button>
+            </form>
+        </div>
+    </main>
+
+    <script>
+        const userTypeSelect = document.getElementById('userType');
+        const volunteerFields = document.getElementById('volunteerFields');
+        const ngoFields = document.getElementById('ngoFields');
+
+        userTypeSelect.addEventListener('change', (e) => {
+            if (e.target.value === 'volunteer') {
+                volunteerFields.style.display = 'block';
+                ngoFields.style.display = 'none';
+            } else if (e.target.value === 'ngo') {
+                volunteerFields.style.display = 'none';
+                ngoFields.style.display = 'block';
+            }
+        });
+    </script>
+</body>
+
+</html>
